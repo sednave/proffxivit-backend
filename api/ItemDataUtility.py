@@ -1,4 +1,7 @@
 import json
+from os import path
+
+BASE_DIR = path.dirname(path.abspath(__file__))
 
 class ItemDataUtility:
     namesToIds = {} # <string, int>
@@ -7,14 +10,16 @@ class ItemDataUtility:
     initialized = False
 
     def __init__(self):
-        with open("item_ids.json", "r") as f:
+        item_ids_file_path = path.join(BASE_DIR, "item_ids.json")
+        with open(item_ids_file_path, "r") as f:
             ItemDataUtility.idsToNames = json.load(f)
         ItemDataUtility.namesToIds = {}
         for id in ItemDataUtility.idsToNames:
             name = ItemDataUtility.idsToNames[id]
             ItemDataUtility.namesToIds[name] = id
         
-        with open("recipes.json", "r") as f:
+        recipes_file_path = path.join(BASE_DIR, "recipes.json")
+        with open(recipes_file_path, "r") as f:
             ItemDataUtility.recipes = json.load(f)
         
         ItemDataUtility.initialized = True
