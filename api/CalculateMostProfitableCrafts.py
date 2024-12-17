@@ -3,8 +3,8 @@ INTERVAL_IN_MILLISECONDS = 1000
 TOP_N_TO_KEEP = 10
 
 import asyncio
-from .ItemDataUtility import ItemDataUtility
-from .GetItemProfit import GetItemProfit
+from ItemDataUtility import ItemDataUtility
+from GetItemProfit import GetItemProfit
 
 mostProfitable = []
 

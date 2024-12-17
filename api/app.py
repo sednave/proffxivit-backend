@@ -1,8 +1,8 @@
 from threading import Thread
 from flask import Flask, jsonify
 from flask_cors import CORS
-from .CalculateMostProfitableCrafts import GetMostProfitableCrafts
-from .CalculateMostProfitableCrafts import StartCalculatingMostProfitableCrafts
+from CalculateMostProfitableCrafts import GetMostProfitableCrafts
+from CalculateMostProfitableCrafts import StartCalculatingMostProfitableCrafts
 
 app = Flask(__name__)
 CORS(app)

@@ -1,4 +1,4 @@
-from .ItemDataUtility import ItemDataUtility
+from ItemDataUtility import ItemDataUtility
 import requests
 import json
 
