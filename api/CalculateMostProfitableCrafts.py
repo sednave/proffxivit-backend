@@ -9,7 +9,7 @@ from GetItemProfit import GetItemProfit
 mostProfitable = []
 
 def GetMostProfitableCrafts():
-    return "Hello world!"
+    return mostProfitable
 
 def split_list(lst, n):
     """Splits a list into sublists of size n."""
